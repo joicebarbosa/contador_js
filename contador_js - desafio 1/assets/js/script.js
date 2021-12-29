@@ -1,11 +1,19 @@
 var numeroAtualWhapper = document.getElementById ('numeroAtual');
 var numeroAtual = 0;
 
-function increment() {
-  numeroAtual = numeroAtual + 1;
-  numeroAtualWhapper.innerHTML = numeroAtual;
-}
-function decrement() {
-  numeroAtual = numeroAtual - 1;
-  numeroAtualWhapper.innerHTML = numeroAtual;
-}
+var botaoSubtrai = document.querySelector("#subtrai");
+botaoSubtrai.addEventListener("click", function(event) {
+  event.preventDefault();
+
+    numeroAtual =  numeroAtual - 1;
+    numeroAtualWhapper.innerHTML = numeroAtual;
+})
+
+var botaoSoma = document.querySelector("#soma");
+botaoSoma.addEventListener("click", function(event) {
+  event.preventDefault();
+
+    numeroAtual =  numeroAtual + 1;
+    numeroAtualWhapper.innerHTML = numeroAtual;
+})
+
